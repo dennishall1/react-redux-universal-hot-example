@@ -9,6 +9,7 @@ import counter from './modules/counter';
 import info from './modules/info';
 import widgets from './modules/widgets';
 import chat from './modules/chat';
+import ProductDetail from './modules/ProductDetail';
 
 export default combineReducers({
   routing: routerReducer,
@@ -21,6 +22,7 @@ export default combineReducers({
     counter2: counter,
     counter3: counter
   }),
+  ProductDetail,
   info,
   widgets,
   chat

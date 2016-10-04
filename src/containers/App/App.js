@@ -79,33 +79,33 @@ export default class App extends Component {
             <Navbar.Toggle />
           </Navbar.Header>
 
-          <Navbar.Collapse eventKey={0}>
+          <Navbar.Collapse>
             <Nav navbar>
               {user && <LinkContainer to="/chatFeathers">
                 <NavItem>Chat with Feathers</NavItem>
               </LinkContainer>}
 
               <LinkContainer to="/chat">
-                <NavItem eventKey={1}>Chat</NavItem>
+                <NavItem>Chat</NavItem>
               </LinkContainer>
               <LinkContainer to="/widgets">
-                <NavItem eventKey={2}>Widgets</NavItem>
+                <NavItem>Widgets</NavItem>
               </LinkContainer>
               <LinkContainer to="/survey">
-                <NavItem eventKey={3}>Survey</NavItem>
+                <NavItem>Survey</NavItem>
               </LinkContainer>
               <LinkContainer to="/about">
-                <NavItem eventKey={4}>About Us</NavItem>
+                <NavItem>About Us</NavItem>
               </LinkContainer>
 
               {!user && <LinkContainer to="/login">
-                <NavItem eventKey={5}>Login</NavItem>
+                <NavItem>Login</NavItem>
               </LinkContainer>}
               {!user && <LinkContainer to="/register">
-                <NavItem eventKey={6}>Register</NavItem>
+                <NavItem>Register</NavItem>
               </LinkContainer>}
               {user && <LinkContainer to="/logout">
-                <NavItem eventKey={7} className="logout-link" onClick={this.handleLogout}>
+                <NavItem className="logout-link" onClick={this.handleLogout}>
                   Logout
                 </NavItem>
               </LinkContainer>}
@@ -115,7 +115,7 @@ export default class App extends Component {
             </p>}
             <Nav navbar pullRight>
               <NavItem
-                eventKey={1} target="_blank" title="View on Github"
+                target="_blank" title="View on Github" rel="noopener noreferrer"
                 href="https://github.com/erikras/react-redux-universal-hot-example">
                 <i className="fa fa-github" />
               </NavItem>
@@ -138,9 +138,17 @@ export default class App extends Component {
 
         <div className="well text-center">
           Have questions? Ask for help{' '}
-          <a href="https://github.com/erikras/react-redux-universal-hot-example/issues" target="_blank">on Github</a>
+          <a
+            href="https://github.com/erikras/react-redux-universal-hot-example/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            on Github
+          </a>
           {' '}or in the{' '}
-          <a href="https://discord.gg/0ZcbPKXt5bZZb1Ko" target="_blank">#react-redux-universal</a>
+          <a href="https://discord.gg/0ZcbPKXt5bZZb1Ko" target="_blank" rel="noopener noreferrer">
+            #react-redux-universal
+          </a>
           {' '}Discord channel.
         </div>
       </div>
